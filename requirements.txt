@@ -1,0 +1,33 @@
+# MSBI-565 final project -- HER2/EGFR selectivity QSAR
+#
+# Install:   pip install -r requirements.txt
+# In Colab:  only rdkit needs installing; the rest are pre-installed.
+#
+# Versions are lower bounds that the code is known to work with. The project
+# was developed against the exact versions listed in the right-hand comments.
+
+# --- core numerics -------------------------------------------------------
+numpy>=1.26            # developed against 2.5.3
+pandas>=2.0            # developed against 3.0.5
+scipy>=1.11            # developed against 1.18.1  (spearmanr)
+
+# --- modelling -----------------------------------------------------------
+scikit-learn>=1.3      # developed against 1.9.1
+#   Ridge, KNeighborsRegressor, SVR, RandomForestRegressor,
+#   HistGradientBoostingRegressor, DummyRegressor, GroupShuffleSplit,
+#   SimpleImputer, StandardScaler, Pipeline, PCA
+
+# --- cheminformatics -----------------------------------------------------
+rdkit>=2023.9          # developed against 2024.03
+#   Required by 03_curate.py, 04_features.py and 06_selectivity.py for:
+#   SMILES parsing, salt stripping, charge neutralisation, canonical SMILES,
+#   Bemis-Murcko scaffolds, Morgan fingerprints, 2D descriptors, Tanimoto
+#   similarity. NOT required by 01_explore_her2.py, which deliberately uses
+#   PUBCHEM_CID for compound identity so the noise-floor analysis runs
+#   anywhere.
+
+# --- plotting ------------------------------------------------------------
+matplotlib>=3.7        # developed against 3.11.2
+
+# --- data download -------------------------------------------------------
+requests>=2.31         # PubChem PUG REST, used only by 02_fetch_egfr.py
