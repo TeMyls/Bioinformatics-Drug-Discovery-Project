@@ -58,8 +58,7 @@ certainly measuring analog leakage, not generalisation.
 ## 3. Install and run
 
 ```bash
-git clone <your-repo-url>
-cd her2-egfr-qsar
+git clone 
 pip install -r requirements.txt
 ```
 
@@ -127,13 +126,10 @@ her2-egfr-qsar/
 │   ├── 04_features.py           # 3 feature sets + Murcko scaffolds
 │   ├── 05_models.py             # Models A and B
 │   └── 06_selectivity.py        # Model C, baseline, AD, drivers
-├── notebooks/
-│   └── walkthrough.ipynb        # narrated end-to-end run
 ├── results/
-│   ├── figures/                 # fig1 … fig10, referenced by the report
-│   └── tables/                  # table1 … table10
-└── report/
-    └── report.md                # the 5-page write-up
+    ├── figures/                 # fig1 … fig10, referenced by the report
+    └── tables/                  # table1 … table10
+
 ```
 
 ### What each script produces
